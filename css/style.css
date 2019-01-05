@@ -10,6 +10,8 @@
 /* Basic                                                                         */
 /*********************************************************************************/
 @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
 
 
 	body
@@ -20,7 +22,9 @@
 	body,input,textarea,select
 	{
 		/*font-family: 'Oxygen', sans-serif;*/
-		font-family: ‘cwTeXYen’, sans-serif;
+		font-family: 'Slabo 27px','Noto Sans TC', sans-serif;
+		
+		/*font-family: 'cwTeXYen', sans-serif;,*/
 		font-size: 13pt;
 		line-height: 2em;
 	}
