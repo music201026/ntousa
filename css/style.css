@@ -9,6 +9,8 @@
 /*********************************************************************************/
 /* Basic                                                                         */
 /*********************************************************************************/
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+
 
 	body
 	{
@@ -17,7 +19,8 @@
 
 	body,input,textarea,select
 	{
-		font-family: 'Oxygen', sans-serif;
+		/*font-family: 'Oxygen', sans-serif;*/
+		font-family: ‘cwTeXYen’, sans-serif;
 		font-size: 13pt;
 		line-height: 2em;
 	}
@@ -141,7 +144,7 @@
 				background: #141414;
 				color: #FFF !important;
 			}
-	
+		
 
 	/* Sections/Articles */
 	
