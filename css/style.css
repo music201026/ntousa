@@ -28,6 +28,25 @@
 		font-size: 13pt;
 		line-height: 2em;
 	}
+	#gotop {
+		position:fixed;
+		z-index:90;
+		right:30px;
+		bottom:31px;
+		display:none;
+		width:50px;
+		height:50px;
+		color:#fff;
+		background:rgb(2, 27, 112);
+		line-height:50px;
+		border-radius:50%;
+		transition:all 0.5s;
+		text-align: center;
+		box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+	}
+	#gotop :hover{
+		background:#0099CC;
+	}
 
 	h1,h2,h3,h4,h5,h6
 	{
@@ -126,7 +145,7 @@
 		.button
 		{
 			position: relative;
-			display: inline-block;
+			display: inline;
 			margin-top: 2em;
 			padding: 0.8em 1.5em;
 			background: #1d1d1d;
@@ -256,10 +275,10 @@
 			
 			ul.style1 .posted
 			{
-				display: block;
 				margin-top: 1em;
 				padding: 0.50em 0em;
 			}
+		
 
 /*********************************************************************************/
 /* Header                                                                        */
@@ -268,7 +287,7 @@
 	#header
 	{
 		position: relative;
-		background: #ddd url(../images/header.jpg) no-repeat center;
+		background: #dddddd url(../images/header.jpg) no-repeat center;
 		background-size: cover;
 	}
 
@@ -284,7 +303,8 @@
 		{
 			margin: 0;
 		}
-	
+		
+
 /*********************************************************************************/
 /* Banner                                                                        */
 /*********************************************************************************/

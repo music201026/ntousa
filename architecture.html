@@ -16,6 +16,24 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-panels.min.js"></script>
 		<script src="js/init.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				/* 按下GoTop按鈕時的事件 */
+				$('#gotop').click(function(){
+					$('html,body').animate({ scrollTop: 0 }, 'slow');   /* 返回到最頂上 */
+					return false;
+				});
+				 
+				/* 偵測卷軸滑動時，往下滑超過400px就讓GoTop按鈕出現 */
+				$(window).scroll(function() {
+					if ( $(this).scrollTop() > 400){
+						$('#gotop').fadeIn();
+					} else {
+						$('#gotop').fadeOut();
+					}
+				});
+			});
+			</script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -24,7 +42,8 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 	</head>
 	<body>
-
+		<a href="https://music201026.github.io/Bowz/" id="gotop" style="">
+		<i class="fa fa-angle-up">Go Top</i>
 	<!-- Header -->
 		<div id="header">
 			<div class="container">
@@ -32,18 +51,19 @@
 				<!-- Logo -->
 					<div id="logo">
 						<h1><a href="#">國立臺灣海洋大學學生會</a></h1>
-						<span>Design by 李俊霖、李侑珊、邱正量</span>
+						<!-- <span>Design by 李侑珊、邱正量</span> -->
 					</div>
 				
 				<!-- Nav -->
 					<nav id="nav">
 						<ul>
-							<li class="active"><a href="index.html">關於</a></li>
-							<li><a href="threecolumn.html">組織架構</a></li>
-							<li><a href="twocolumn1.html">最新消息</a></li>
-							<li><a href="twocolumn2.html">文件資料</a></li>
-							<li><a href="onecolumn.html">聯絡我們</a></li>
-							<li><a href="threecolumn2.html">投票系統</a></li>
+							<li><a href="index.html">首頁</a></li>
+							<li><a href="about.html">關於</a></li>
+							<li class="active"><a href="architecture.html">組織架構</a></li>
+							<li><a href="news.html">最新消息</a></li>
+							<li><a href="file.html">文件資料</a></li>
+							<li><a href="contact.html">聯絡我們</a></li>
+							<li><a href="vote.html">投票系統</a></li>
 						</ul>
 					</nav>
 

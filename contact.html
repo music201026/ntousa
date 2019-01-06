@@ -16,6 +16,24 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-panels.min.js"></script>
 		<script src="js/init.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				/* 按下GoTop按鈕時的事件 */
+				$('#gotop').click(function(){
+					$('html,body').animate({ scrollTop: 0 }, 'slow');   /* 返回到最頂上 */
+					return false;
+				});
+				 
+				/* 偵測卷軸滑動時，往下滑超過400px就讓GoTop按鈕出現 */
+				$(window).scroll(function() {
+					if ( $(this).scrollTop() > 400){
+						$('#gotop').fadeIn();
+					} else {
+						$('#gotop').fadeOut();
+					}
+				});
+			});
+			</script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -24,26 +42,28 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 	</head>
 	<body>
-
+		<a href="https://music201026.github.io/Bowz/" id="gotop" style="">
+		<i class="fa fa-angle-up">Go Top</i>
 	<!-- Header -->
 		<div id="header">
 			<div class="container">
-					
+				
 				<!-- Logo -->
 					<div id="logo">
 						<h1><a href="#">國立臺灣海洋大學學生會</a></h1>
-						<span>Design by 李俊霖、李侑珊、邱正量</span>
+						<!-- <span>Design by 李侑珊、邱正量</span> -->
 					</div>
 				
 				<!-- Nav -->
 					<nav id="nav">
 						<ul>
-							<li class="active"><a href="index.html">關於</a></li>
-							<li><a href="threecolumn.html">組織架構</a></li>
-							<li><a href="twocolumn1.html">最新消息</a></li>
-							<li><a href="twocolumn2.html">文件資料</a></li>
-							<li><a href="onecolumn.html">聯絡我們</a></li>
-							<li><a href="threecolumn2.html">投票系統</a></li>
+							<li><a href="index.html">首頁</a></li>
+							<li><a href="about.html">關於</a></li>
+							<li><a href="architecture.html">組織架構</a></li>
+							<li><a href="news.html">最新消息</a></li>
+							<li><a href="file.html">文件資料</a></li>
+							<li class="active"><a href="contact.html">聯絡我們</a></li>
+							<li><a href="vote.html">投票系統</a></li>
 						</ul>
 					</nav>
 
@@ -54,50 +74,33 @@
 	<!-- Main -->
 		<div id="main">
 			<div class="container">
+					<script>
+							(function() {
+							  var cx = '006531767284384961372:dxo6edbxmcg';
+							  var gcse = document.createElement('script');
+							  gcse.type = 'text/javascript';
+							  gcse.async = true;
+							  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+							  var s = document.getElementsByTagName('script')[0];
+							  s.parentNode.insertBefore(gcse, s);
+							})();
+						  </script>
+						  <gcse:search></gcse:search>
+		
+			<div><br></div>
 				<div class="row">
-						<script>
-								(function() {
-								  var cx = '006531767284384961372:dxo6edbxmcg';
-								  var gcse = document.createElement('script');
-								  gcse.type = 'text/javascript';
-								  gcse.async = true;
-								  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-								  var s = document.getElementsByTagName('script')[0];
-								  s.parentNode.insertBefore(gcse, s);
-								})();
-							  </script>
-							  <gcse:search></gcse:search>
-			
-				<div><br></div>
-					<!-- Sidebar -->
-						<div id="sidebar" class="4u">
-							<section>
-								<header>
-									<h2>Gravida praesent</h2>
-									<span class="byline">Praesent lacus congue rutrum</span>
-								</header>
-								<p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum. Maecenas luctus lectus at sapien. Consectetuer adipiscing elit.</p>
-								<ul class="default">
-									<li><a href="#">Pellentesque quis lectus gravida blandit.</a></li>
-									<li><a href="#">Lorem ipsum consectetuer adipiscing elit.</a></li>
-									<li><a href="#">Phasellus nec nibh pellentesque congue.</a></li>
-									<li><a href="#">Cras aliquam risus pellentesque pharetra.</a></li>
-									<li><a href="#">Duis non metus commodo euismod lobortis.</a></li>
-									<li><a href="#">Lorem ipsum dolor adipiscing elit.</a></li>
-								</ul>
-							</section>
-						</div>
-					<!-- Sidebar -->
-				
+
 					<!-- Content -->
-						<div id="content" class="8u skel-cell-important">
+						<div id="content" class="12u skel-cell-important">
 							<section>
 								<header>
-									<h2>Left Sidebar</h2>
-									<span class="byline">Donec leo, vivamus fermentum nibh in augue praesent</span>
+									<h2>No Sidebar</h2>
+									<span class="byline">Vivamus fermentum nibh in augue praesent congue rutrum</span>
 								</header>
 								<p><a href="#" class="image full"><img src="images/pics02.jpg" alt=""></a></p>
 								<p>Maecenas pede nisl, elementum eu, ornare ac, malesuada at, erat. Proin gravida orci porttitor enim accumsan lacinia. Donec condimentum, urna non molestie semper, ligula enim ornare nibh, quis laoreet eros quam eget ante. Aliquam libero. Vivamus nisl nibh, iaculis vitae, viverra sit amet, ullamcorper vitae, turpis. Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo. Fusce odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Donec nonummy magna quis risus. Quisque eleifend. Phasellus tempor vehicula justo.</p>
+					<p>Pellentesque pede. Donec pulvinar ullamcorper metus. In eu odio at lectus pulvinar mollis. Vestibulum sem magna, elementum ut, vestibulum eu, facilisis quis, arcu. Mauris a dolor. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed blandit. Phasellus pellentesque, ante nec iaculis dapibus, eros justo auctor lectus, a lobortis lorem mauris quis nunc. Praesent pellentesque facilisis elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. In hac habitasse platea dictumst. Nullam id ante eget dui vulputate aliquam. Pellentesque erat erat, tincidunt in, eleifend accumsan, malesuada eget, augue. Suspendisse sit amet tellus in eros bibendum condimentum. Vestibulum suscipit volutpat nulla. Phasellus pellentesque, ante nec iaculis dapibus, eros justo auctor lectus, a lobortis lorem mauris quis nunc. Praesent pellentesque facilisis elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.</p>
+					<p>Vestibulum sem magna, elementum ut, vestibulum eu, facilisis quis, arcu. Mauris a dolor. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed blandit. Phasellus pellentesque, ante nec iaculis dapibus, eros justo auctor lectus, a lobortis lorem mauris quis nunc. Praesent pellentesque facilisis elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. In hac habitasse platea dictumst. Nullam id ante eget dui vulputate aliquam. Pellentesque erat erat, tincidunt in, eleifend accumsan, malesuada eget, augue. Suspendisse sit amet tellus in eros bibendum condimentum. Vestibulum suscipit volutpat nulla. Phasellus pellentesque, ante nec iaculis dapibus, eros justo auctor lectus, a lobortis lorem mauris quis nunc. Praesent pellentesque facilisis elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Pellentesque pede. Donec pulvinar ullamcorper metus. In eu odio at lectus pulvinar mollis.</p>
 							</section>
 						</div>
 					<!-- /Content -->
