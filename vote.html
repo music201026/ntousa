@@ -17,23 +17,23 @@
 		<script src="js/skel-panels.min.js"></script>
 		<script src="js/init.js"></script>
 		<script type="text/javascript">
-			$(function() {
-				/* 按下GoTop按鈕時的事件 */
-				$('#gotop').click(function(){
-					$('html,body').animate({ scrollTop: 0 }, 'slow');   /* 返回到最頂上 */
-					return false;
-				});
-				 
-				/* 偵測卷軸滑動時，往下滑超過400px就讓GoTop按鈕出現 */
-				$(window).scroll(function() {
-					if ( $(this).scrollTop() > 400){
-						$('#gotop').fadeIn();
-					} else {
-						$('#gotop').fadeOut();
-					}
-				});
-			});
-			</script>
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				document.getElementById("myBtn").style.display = "block";
+			} else {
+				document.getElementById("myBtn").style.display = "none";
+			}
+			}
+
+			// When the user clicks on the button, scroll to the top of the document
+			function topFunction() {
+				$("html, body").animate({scrollTop : 0},800);
+			//document.body.scrollTop = 0; // For Safari
+			//document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+			}
+		</script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -42,8 +42,7 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 	</head>
 	<body>
-		<a href="https://music201026.github.io/Bowz/" id="gotop" style="">
-		<i class="fa fa-angle-up">Go Top</i>
+			<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 	<!-- Header -->
 		<div id="header">
 			<div class="container">
