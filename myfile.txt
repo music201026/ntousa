@@ -1,3 +1,7 @@
 Compal init
-issue_one add 
+issue_one add  
 issue_one commit
+master add / rebase version
+master add
+issue_one add / to master
+issue_one commit / to master
